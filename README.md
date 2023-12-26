@@ -1,0 +1,2 @@
+# ShopDesktop
+.Net 7
