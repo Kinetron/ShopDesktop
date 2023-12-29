@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <IsPackable>False</IsPackable>
+    <Nullable>enable</Nullable>
+    <AvaloniaNameGeneratorBehavior>OnlyProperties</AvaloniaNameGeneratorBehavior>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Layouts\ManageWindowLayoutsWindow.axaml" />
+    <UpToDateCheckInput Remove="Views\Layouts\ResetWindowLayoutWindow.axaml" />
+    <UpToDateCheckInput Remove="Views\Layouts\SaveWindowLayoutWindow.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Dock.Avalonia" Version="11.0.0.5" />
+    <PackageReference Include="Dock.Model.Mvvm" Version="11.0.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\WebSiteBackups\" />
+    <Folder Include="Views\WebSiteBackups\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Modules\WebSiteBackupsView.axaml.cs">
+      <DependentUpon>WebSiteBackupsView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
