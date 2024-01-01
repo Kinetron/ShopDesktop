@@ -1,11 +1,11 @@
-﻿<Window x:Class="Notepad.Views.MainWindow"
+﻿<Window x:Class="ShopDesktop.Views.MainWindow"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:ids="using:Dock.Settings"
-        xmlns:vm="using:Notepad.ViewModels"
-        xmlns:views="using:Notepad.Views"
+        xmlns:vm="using:ShopDesktop.ViewModels"
+        xmlns:views="using:ShopDesktop.Views"
         mc:Ignorable="d"
         d:DesignWidth="900" d:DesignHeight="600"
         x:Name="MainWindowView"
@@ -14,7 +14,7 @@
         Foreground="{DynamicResource DockThemeForegroundBrush}"
         BorderThickness="1" BorderBrush="{DynamicResource DockThemeBorderLowBrush}"
         FontFamily="Segoe UI, SF Pro Display, Noto Sans, Cantarel"
-        Title="Notepad" Height="600" Width="900"
+        Title="GearShop" Height="600" Width="900"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="PreferSystemChrome"
         ids:DockProperties.IsDragEnabled="True" ids:DockProperties.IsDropEnabled="True">
@@ -23,7 +23,7 @@
   </Design.DataContext>
   <Panel Margin="{Binding #MainWindowView.OffScreenMargin}">
     <Panel Height="30" HorizontalAlignment="Center" VerticalAlignment="Top">
-      <Label Content="Notepad"
+      <Label Content="GearShop"
              Margin="4,0,4,0"
              FontSize="14"
              FontWeight="Normal"

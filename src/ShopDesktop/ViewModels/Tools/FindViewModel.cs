@@ -1,9 +1,9 @@
 ﻿using Dock.Model.Controls;
 using Dock.Model.Core;
 using Dock.Model.Mvvm.Controls;
-using Notepad.ViewModels.Documents;
+using ShopDesktop.ViewModels.Documents;
 
-namespace Notepad.ViewModels.Tools;
+namespace ShopDesktop.ViewModels.Tools;
 
 public class FindViewModel : Tool
 {

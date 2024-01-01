@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Notepad.Views;
+namespace ShopDesktop.Views;
 
 public partial class MainWindow : Window
 {

@@ -1,6 +1,6 @@
 ﻿using Dock.Model.Mvvm.Controls;
 
-namespace Notepad.ViewModels.Documents;
+namespace ShopDesktop.ViewModels.Documents;
 
 public class FileViewModel : Document
 {

@@ -1,6 +1,6 @@
 ﻿using Avalonia.Input;
 
-namespace Notepad.ViewModels;
+namespace ShopDesktop.ViewModels;
 
 public interface IDropTarget
 {

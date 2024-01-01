@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
-using Notepad.ViewModels;
+using ShopDesktop.ViewModels;
 
-namespace Notepad.Views.Modules;
+namespace ShopDesktop.Views.Modules;
 
 public partial class WebSiteBackupsView : UserControl
 {

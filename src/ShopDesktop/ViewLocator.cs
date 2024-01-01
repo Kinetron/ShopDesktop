@@ -4,7 +4,7 @@ using Avalonia.Controls.Templates;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Dock.Model.Core;
 
-namespace Notepad;
+namespace ShopDesktop;
 
 public class ViewLocator : IDataTemplate
 {

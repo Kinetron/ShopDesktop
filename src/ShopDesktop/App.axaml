@@ -1,11 +1,11 @@
 ﻿<Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:Notepad"
+             xmlns:local="using:ShopDesktop"
              xmlns:ids="using:Dock.Settings"
              xmlns:idc="using:Dock.Avalonia.Controls"
              xmlns:idcr="using:Dock.Avalonia.Controls.Recycling"
-             x:Class="Notepad.App"
-             Name="Notepad"
+             x:Class="ShopDesktop.App"
+             Name="ShopDesktop"
              RequestedThemeVariant="Light">
 
   <Application.DataTemplates>

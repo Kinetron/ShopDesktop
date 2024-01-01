@@ -1,7 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Notepad.Views.Tools;
+namespace ShopDesktop.Views.Tools;
 
 public partial class ReplaceView : UserControl
 {

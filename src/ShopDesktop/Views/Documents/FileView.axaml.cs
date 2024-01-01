@@ -1,7 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Notepad.Views.Documents;
+namespace ShopDesktop.Views.Documents;
 
 public partial class FileView : UserControl
 {

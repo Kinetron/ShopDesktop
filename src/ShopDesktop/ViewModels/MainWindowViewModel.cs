@@ -9,9 +9,9 @@ using Avalonia.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Dock.Model.Controls;
 using Dock.Model.Core;
-using Notepad.ViewModels.Documents;
+using ShopDesktop.ViewModels.Documents;
 
-namespace Notepad.ViewModels;
+namespace ShopDesktop.ViewModels;
 
 public class MainWindowViewModel : ObservableObject, IDropTarget
 {
@@ -26,7 +26,7 @@ public class MainWindowViewModel : ObservableObject, IDropTarget
 
     public MainWindowViewModel()
     {
-        _factory = new NotepadFactory();
+        _factory = new ShopDesktopFactory();
 
         Layout = _factory?.CreateLayout();
         if (Layout is { })
@@ -111,8 +111,8 @@ public class MainWindowViewModel : ObservableObject, IDropTarget
 
     public void FileNew()
     {
-        var untitledFileViewModel = GetUntitledFileViewModel();
-        AddFileViewModel(untitledFileViewModel);
+        //var untitledFileViewModel = GetUntitledFileViewModel();
+        //AddFileViewModel(untitledFileViewModel);
     }
 
     public async void FileOpen()

@@ -3,6 +3,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Notepad.Views.Modules.WebSiteBackupsView">
-   Модуль бэкапов сайта!
+             x:Class="ShopDesktop.Views.Modules.WebSiteBackupsView">
+	<StackPanel Background="White" HorizontalAlignment="Center" VerticalAlignment="Top">
+		<Grid VerticalAlignment="Stretch" RowDefinitions="Auto,Auto,Auto"
+              Margin="5,5,5,5">
+            <TextBox Grid.Row="0" Grid.Column="0" AcceptsReturn="True" Width="700" Height="305"
+                     TextWrapping="Wrap" HorizontalAlignment="Left"
+                     IsReadOnly="True"
+                     Text="{Binding InfoText}"
+            />
+            <StackPanel Grid.Row="2" Grid.Column="0" Height="35" >
+                <TextBlock IsVisible="{Binding ShowProgressControls}"
+                           Text="{Binding ProgressText}"/>
+                <ProgressBar Name="RunProgress" IsVisible="{Binding ShowProgressControls}"
+                             Value="{Binding ProgressValue}"
+                             ShowProgressText="True"
+                             IsIndeterminate="False" Minimum="0" Maximum="100" Height="20"/>
+            </StackPanel>
+        </Grid>
+		<Grid RowDefinitions="Auto"
+			  ColumnDefinitions="Auto,Auto" HorizontalAlignment="Right"
+			  Margin="10,10,5,0">
+			<Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"
+					Margin="10,0,0,10" Width="120" Foreground="White" Background="#CC0099"
+					HorizontalContentAlignment="Center"
+					Command="{Binding CreateBackup}" IsEnabled="True">
+				Создать
+			</Button>
+		</Grid>
+        
+	</StackPanel>
 </UserControl>

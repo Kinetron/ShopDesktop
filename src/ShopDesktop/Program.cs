@@ -1,7 +1,7 @@
 ﻿using System;
 using Avalonia;
 
-namespace Notepad;
+namespace ShopDesktop;
 
 internal class Program
 {

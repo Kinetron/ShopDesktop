@@ -1,9 +1,9 @@
 ﻿using System.Text;
 using CommunityToolkit.Mvvm.Input;
 using Dock.Model.Mvvm.Controls;
-using Notepad.ViewModels.Documents;
+using ShopDesktop.ViewModels.Documents;
 
-namespace Notepad.ViewModels.Docks;
+namespace ShopDesktop.ViewModels.Docks;
 
 public class FilesDocumentDock : DocumentDock
 {

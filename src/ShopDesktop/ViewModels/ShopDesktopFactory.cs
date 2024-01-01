@@ -6,14 +6,15 @@ using Dock.Model.Controls;
 using Dock.Model.Core;
 using Dock.Model.Mvvm;
 using Dock.Model.Mvvm.Controls;
-using Notepad.ViewModels.Docks;
-using Notepad.ViewModels.Documents;
-using Notepad.ViewModels.Tools;
-using Notepad.ViewModels.Modules;
+using ShopDesktop.ViewModels.Docks;
+using ShopDesktop.ViewModels.Documents;
+using ShopDesktop.ViewModels.Modules;
+using ShopDesktop.ViewModels.Tools;
+using WebSiteBackups.Contracts;
 
-namespace Notepad.ViewModels;
+namespace ShopDesktop.ViewModels;
 
-public class NotepadFactory : Factory
+public class ShopDesktopFactory : Factory
 {
     private IRootDock? _rootDock;
     private IDocumentDock? _documentDock;
@@ -32,20 +33,12 @@ public class NotepadFactory : Factory
             Encoding = Encoding.Default.WebName
         };
 
-        var untitledFileViewModel1 = new FileViewModel()
+        IWebSiteBackups siteBackups = new WebSiteBackups.WebSiteBackups();
+		WebSiteBackupsViewModel backupsViewModel = new WebSiteBackupsViewModel(siteBackups)
         {
 	        Path = string.Empty,
-	        Title = "Untitled1",
-	        Text = "",
-	        Encoding = Encoding.Default.WebName
-        };
-
-
-		WebSiteBackupsViewModel backupsViewModel = new WebSiteBackupsViewModel()
-        {
-	        Path = string.Empty,
-	        Title = "zssa",
-	        Text = "",
+	        Title = siteBackups.Name,
+			Text = "",
 	        Encoding = Encoding.Default.WebName
 		};
         
@@ -71,7 +64,7 @@ public class NotepadFactory : Factory
            // ActiveDockable = untitledFileViewModel,
             VisibleDockables = CreateList<IDockable>
             (
-                untitledFileViewModel,
+               // untitledFileViewModel,
                 //untitledFileViewModel1,
 				backupsViewModel
 			),
