@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using DbAdaptor;
 using Dock.Avalonia.Controls;
 using Dock.Model.Controls;
 using Dock.Model.Core;
@@ -33,7 +34,8 @@ public class ShopDesktopFactory : Factory
             Encoding = Encoding.Default.WebName
         };
 
-        IWebSiteBackups siteBackups = new WebSiteBackups.WebSiteBackups();
+        IDbAdaptor dbAdaptor = IoC.Get<IDbAdaptor>();
+        IWebSiteBackups siteBackups = new WebSiteBackups.WebSiteBackups(dbAdaptor);
 		WebSiteBackupsViewModel backupsViewModel = new WebSiteBackupsViewModel(siteBackups)
         {
 	        Path = string.Empty,
